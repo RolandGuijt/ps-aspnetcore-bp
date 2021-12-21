@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "869bc57b-b366-48a0-bf1f-5a59e5c3d1ae": {
+      "ProjectGuid": "869bc57b-b366-48a0-bf1f-5a59e5c3d1ae",
+      "DisplayName": "CarvedRock-BlazorServer",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

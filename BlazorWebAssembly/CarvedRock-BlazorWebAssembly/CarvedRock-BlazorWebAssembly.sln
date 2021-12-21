@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock-BlazorWebAssembly", "CarvedRock-BlazorWebAssembly\CarvedRock-BlazorWebAssembly.csproj", "{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E6C332C-BCEF-41C3-A38A-C3A717EF9567}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "57ccde9a-107b-4521-8bba-f13be4dbca34": {
+      "ProjectGuid": "57ccde9a-107b-4521-8bba-f13be4dbca34",
+      "DisplayName": "CarvedRock-BlazorWebAssembly",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "e7d06a34-3ef1-4cfe-a038-4eb7f14b3168": {
+      "ProjectGuid": "e7d06a34-3ef1-4cfe-a038-4eb7f14b3168",
+      "DisplayName": "CarvedRock-WebApi",
+      "ColorIndex": 1
+    },
+    "36e8dae8-e975-498f-8380-260abfffa9ee": {
+      "ProjectGuid": "36e8dae8-e975-498f-8380-260abfffa9ee",
+      "DisplayName": "CarvedRock-Shared",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
