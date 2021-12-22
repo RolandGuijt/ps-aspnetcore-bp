@@ -5,18 +5,18 @@ namespace CarvedRock_BlazorWebAssembly.Pages;
 
     public partial class Create
 {
-    private Product newProduct { get; set; } = new();
+    private Product NewProduct { get; set; } = new();
 
     [Inject]
-    private IProductRepository productRepository { get; set; } = default!;
+    private IProductRepository ProductRepository { get; set; } = default!;
 
     [Inject]
-    private NavigationManager navigationManager { get; set; } = default!;
+    private NavigationManager NavigationManager { get; set; } = default!;
 
     private async void CreateProduct()
     {
-        await productRepository.Add(newProduct);
-        navigationManager.NavigateTo("/");
+        await ProductRepository.Add(NewProduct);
+        NavigationManager.NavigateTo("/");
     }
 }
 

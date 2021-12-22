@@ -1,0 +1,25 @@
+﻿@using CarvedRock_gRPC
+@model Product
+
+<h4>Add a product</h4>
+<form asp-action="Create">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row mb-2 form-group">
+        <div class="col-3">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="Name"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label asp-for="Price"></label>
+        </div>
+        <div class="col-9">
+            <input class="form-control" type="text" asp-for="Price"/>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

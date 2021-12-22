@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "CarvedRock_gRPC";
+
+package CarvedRockgRPC;
+
+service Products {
+  rpc GetAll (AllProductsRequest) returns (AllProductsResponse);
+  rpc CreateNew(CreateNewRequest) returns (CreateNewResponse);
+}
+
+message AllProductsRequest {
+}
+
+message AllProductsResponse {
+  repeated Product products = 1;
+}
+
+message CreateNewRequest {
+  Product product = 1;
+}
+
+message CreateNewResponse {
+  Product product = 1;
+}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  float price = 3;
+  int32 stock = 4;
+  string photoFileName = 5;
+}
