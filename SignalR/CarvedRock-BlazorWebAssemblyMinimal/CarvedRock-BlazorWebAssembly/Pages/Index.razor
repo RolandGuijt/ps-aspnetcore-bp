@@ -1,0 +1,47 @@
+﻿@page "/"
+@using CarvedRock_BlazorWebAssembly.ApiServices
+@using CarvedRock_Shared.Data
+@using Microsoft.AspNetCore.SignalR.Client
+@inject IProductApiService productApiService
+
+<div class="row">
+    <h4 class="mb-3 ml-5">Today's specials:</h4>
+</div>
+
+@foreach (var product in products)
+{
+    <div class="row mb-4">
+        <div class="col-2 text-center"><img height="80" src="Images/@product.PhotoFileName" alt="Product image" /></div>
+        <div class="col-2 my-auto">@product.Name</div>
+        <div class="col-2 my-auto">$@product.Price</div>
+        <div class="col-2 my-auto">@product.Stock in stock</div>
+    </div>
+}
+
+<div class="row">
+    <div class="ml-5 mt-3">
+        <NavLink href="create">New product</NavLink>
+    </div>
+</div>
+
+@code {
+    private List<Product> products { get; set; } = Enumerable.Empty<Product>().ToList();
+    private HubConnection? hubConnection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await productApiService.GetAll();
+
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl("https://localhost:7273/producthub")
+            .Build();
+
+        hubConnection.On<Product>("NewProduct", (product) =>
+        {
+            products.Add(product);
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+    }
+}

@@ -14,7 +14,8 @@ namespace CarvedRock_MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await productRepository.GetAll());
+            var model = await productRepository.GetAll();
+            return View(model);
         }
 
         public IActionResult Create()

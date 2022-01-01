@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock-BlazorWebAssembly", "CarvedRock-BlazorWebAssembly\CarvedRock-BlazorWebAssembly.csproj", "{57CCDE9A-107B-4521-8BBA-F13BE4DBCA34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock-WebApi", "CarvedRock-WebApi\CarvedRock-WebApi.csproj", "{E7D06A34-3EF1-4CFE-A038-4EB7F14B3168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock-WebApi", "CarvedRock-WebApi\CarvedRock-WebApi.csproj", "{E7D06A34-3EF1-4CFE-A038-4EB7F14B3168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock-Shared", "CarvedRock-Shared\CarvedRock-Shared.csproj", "{36E8DAE8-E975-498F-8380-260ABFFFA9EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock-Shared", "CarvedRock-Shared\CarvedRock-Shared.csproj", "{36E8DAE8-E975-498F-8380-260ABFFFA9EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
