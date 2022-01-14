@@ -9,7 +9,8 @@
 @foreach (var product in Model.Products)
 {
     <div class="row mb-4">
-        <div class="col-2 text-center"><img height="80" src="Images/@product.PhotoFileName" alt="Product image" /></div>
+        <div class="col-2 text-center"><img height="80" 
+            src="Images/@product.PhotoFileName" alt="Product image" /></div>
         <div class="col-2 my-auto">@product.Name</div>
         <div class="col-2 my-auto">$@product.Price</div>
         <div class="col-2 my-auto">@product.Stock in stock</div>

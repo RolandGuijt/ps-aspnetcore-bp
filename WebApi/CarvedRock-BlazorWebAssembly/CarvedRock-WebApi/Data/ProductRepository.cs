@@ -1,4 +1,6 @@
-﻿namespace CarvedRock_WebApi.Data;
+﻿using CarvedRock_Shared.Data;
+
+namespace CarvedRock_WebApi.Data;
 public class ProductRepository : IProductRepository
 {
     private List<Product> products = new()

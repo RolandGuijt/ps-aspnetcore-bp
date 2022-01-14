@@ -2,36 +2,37 @@
 using Microsoft.AspNetCore.Mvc;
 using static CarvedRock_gRPC.Products;
 
-namespace CarvedRock_MVC.Controllers
+namespace CarvedRock_MVC.Controllers;
+
+public class ProductController : Controller
 {
-    public class ProductController : Controller
+    private readonly ProductsClient client;
+
+    public ProductController(ProductsClient client)
     {
-        private readonly ProductsClient client;
+        this.client = client;
+    }
 
-        public ProductController(ProductsClient client)
-        {
-            this.client = client;
-        }
+    public async Task<IActionResult> Index()
+    {
+        var response = await client.GetAllAsync(
+            new AllProductsRequest());
+        return View(response.Products);
+    }
 
-        public async Task<IActionResult> Index()
-        {
-            var response = await client.GetAllAsync(new AllProductsRequest());
-            return View(response.Products);
-        }
+    public IActionResult Create()
+    {
+        return View();
+    }
 
-        public IActionResult Create()
-        {
+    [HttpPost]
+    public async Task<IActionResult> Create(Product newProduct)
+    {
+        if (!ModelState.IsValid)
             return View();
-        }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(Product newProduct)
-        {
-            if (!ModelState.IsValid)
-                return View();
-
-            await client.CreateNewAsync(new CreateNewRequest { Product = newProduct });
-            return RedirectToAction("Index");
-        }
+        await client.CreateNewAsync(new CreateNewRequest { 
+            Product = newProduct });
+        return RedirectToAction("Index");
     }
 }

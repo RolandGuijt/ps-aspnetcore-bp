@@ -23,7 +23,8 @@
 </div>
 
 @code {
-    private IEnumerable<Product> Products { get; set; } = Enumerable.Empty<Product>();
+    private IEnumerable<Product> Products { get; set; } = 
+        Enumerable.Empty<Product>();
 
     protected override async Task OnInitializedAsync()
     {

@@ -1,4 +1,6 @@
 ﻿
+using CarvedRock_Shared.Data;
+
 namespace CarvedRock_WebApi.Data
 {
     public interface IProductRepository

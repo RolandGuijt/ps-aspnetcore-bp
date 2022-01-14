@@ -1,3 +1,4 @@
+using CarvedRock_Shared.Data;
 using CarvedRock_WebApi.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,7 @@ namespace CarvedRock_WebApi.Controllers
             this.productRepository = productRepository;
         }
 
-        [HttpGet()]
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var products = await productRepository.GetAll();
@@ -38,8 +39,8 @@ namespace CarvedRock_WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(Product product)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            //if (!ModelState.IsValid)
+            //    return BadRequest(ModelState);
                 
             await productRepository.Add(product);
             return CreatedAtAction(nameof(GetOne), new { id = product.Id }, product);

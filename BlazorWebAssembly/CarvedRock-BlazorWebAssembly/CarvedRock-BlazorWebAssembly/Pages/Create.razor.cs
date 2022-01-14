@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace CarvedRock_BlazorWebAssembly.Pages;
 
-    public partial class Create
+public partial class Create
 {
     private Product NewProduct { get; set; } = new();
 

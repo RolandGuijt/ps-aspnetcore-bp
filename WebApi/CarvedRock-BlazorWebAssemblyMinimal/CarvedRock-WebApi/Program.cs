@@ -2,17 +2,13 @@ using CarvedRock_WebApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddEndpointsApiExplorer();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -36,7 +32,8 @@ app.MapGet("/product", async (IProductRepository productRepository) =>
     return Results.Ok(products);
 });
 
-app.MapGet("/product/{id:int}", async (int id, IProductRepository productRepository) =>
+app.MapGet("/product/{id:int}", async (int id, 
+    IProductRepository productRepository) =>
 {
     var product = await productRepository.GetOne(id);
 
@@ -47,7 +44,8 @@ app.MapGet("/product/{id:int}", async (int id, IProductRepository productReposit
 })
     .WithName("GetOne");
 
-app.MapPost("/product", async (Product product, IProductRepository productRepository) =>
+app.MapPost("/product", async (Product product, 
+    IProductRepository productRepository) =>
 {
     //no validation
 
